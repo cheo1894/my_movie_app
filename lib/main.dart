@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_movie_app/pages/details_screen.dart';
 import 'package:my_movie_app/pages/home_page.dart';
 import 'package:my_movie_app/providers/movies_provider.dart';
 import 'package:provider/provider.dart';
@@ -23,8 +24,28 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Movie storm',
       initialRoute: 'home',
-      routes: {'home': (_) => HomePage()},
-      theme: ThemeData.dark().copyWith(backgroundColor: Color(0xFF000000)),
+      routes: {'home': (_) => HomePage(), 'details': (_) => DetailsScreen()},
+      theme: myTheme(),
     );
+  }
+
+  ThemeData myTheme() {
+    var textColor = 0xffB9B9B9;
+    var backGroundColor = 0xff335765;
+    return ThemeData(
+        primaryColor: Color(backGroundColor),
+        textTheme: TextTheme(
+            bodyText1: TextStyle(color: Color(textColor)),
+            bodyText2: TextStyle(color: Color(textColor))
+            
+            ),
+        appBarTheme: AppBarTheme(
+            iconTheme: IconThemeData(color: Color(textColor)),
+            //color: Color(backGroundColor),
+            elevation: 0,
+            backgroundColor: Color(backGroundColor),
+            titleTextStyle: TextStyle(color: Color(textColor), fontSize: 22)),
+        scaffoldBackgroundColor: Color(backGroundColor)
+        );
   }
 }
