@@ -35,7 +35,7 @@ class DetailsScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                       boxShadow: [
                         BoxShadow(
-                            color: Color(0xFFB9B9B9).withOpacity(0.2),
+                            color: Color(0x000000).withOpacity(0.5),
                             offset: Offset(0, 2),
                             blurRadius: 3)
                       ]),
@@ -108,7 +108,7 @@ class DetailsScreen extends StatelessWidget {
                     children: [
                       CastSlider(movie.id),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       )
                     ],
                   )),
@@ -126,7 +126,7 @@ class DetailsScreen extends StatelessWidget {
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(color: Color(0xff000000).withOpacity(0.5), offset: Offset(0.5, 1), blurRadius: 3)
             ], color: moviesProvider.cardColor, borderRadius: BorderRadius.circular(18)),
-            child: Center(child: Icon(icon, color: Color(0xffB9B9B9)))),
+            child: Center(child: Icon(icon, color: Colors.white))),
         SizedBox(
           height: 8,
         ),

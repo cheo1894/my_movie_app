@@ -110,7 +110,7 @@ class _CastCard extends StatelessWidget {
               height: 5,
             ),
             Container(
-              margin: EdgeInsets.only(right: 5),
+              margin: EdgeInsets.only(right: 8),
               width: double.infinity,
               child: Text(
                 actor.name,
@@ -118,7 +118,7 @@ class _CastCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
                 style: TextStyle(
-                  color: Color(0xffB9B9B9),
+                  color: Color(0xffffffff),
                 ),
               ),
             )

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_movie_app/providers/movies_provider.dart';
 import 'package:my_movie_app/search/search_delegate.dart';
-import 'package:my_movie_app/widgets/appbar.dart';
 import 'package:my_movie_app/widgets/card_swipter.dart';
 import 'package:my_movie_app/widgets/movie_slider.dart';
 import 'package:provider/provider.dart';
@@ -66,7 +65,7 @@ class HomePage extends StatelessWidget {
                         nameCategory: 'Proximanete en cines',
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       )
                     ],
                   )),

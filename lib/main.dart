@@ -30,8 +30,8 @@ class MyApp extends StatelessWidget {
   }
 
   ThemeData myTheme() {
-    var textColor = 0xffB9B9B9;
-    var backGroundColor = 0xff335765;
+    var textColor = 0xffffffff;
+    var backGroundColor = 0xff0B85FF;
     return ThemeData(
         primaryColor: Color(backGroundColor),
         textTheme: TextTheme(

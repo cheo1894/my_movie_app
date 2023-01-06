@@ -75,7 +75,7 @@ class _MovieSliderState extends State<MovieSlider> {
                               ),
                             ),
                             SizedBox(
-                              height: 5,
+                              height: 8,
                             ),
                             Container(
                               margin: EdgeInsets.only(right: 5),
@@ -86,7 +86,7 @@ class _MovieSliderState extends State<MovieSlider> {
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 2,
                                 style: TextStyle(
-                                  color: Color(0xffB9B9B9),
+                                  color: Colors.white,
                                 ),
                               ),
                             )

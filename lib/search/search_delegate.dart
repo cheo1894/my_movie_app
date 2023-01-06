@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:my_movie_app/models/creditsResponse.dart';
 import 'package:my_movie_app/models/movies.dart';
-import 'package:my_movie_app/models/now_playing_response.dart';
-import 'package:my_movie_app/models/popular_response.dart';
-import 'package:my_movie_app/models/top_rated_response.dart';
-import 'package:my_movie_app/models/upcoming_response.dart';
 import 'package:my_movie_app/providers/movies_provider.dart';
 import 'package:provider/provider.dart';
 
 class MovieSearchDelegate extends SearchDelegate {
   @override
   ThemeData appBarTheme(BuildContext context) {
-    var backgroundColor = Color(0xff335765);
-    var textColor = Color(0xffB9B9B9);
+    var backgroundColor = Color(0xff0B85FF);
+    var textColor = Color(0xffffffff);
     return ThemeData(
       inputDecorationTheme: InputDecorationTheme(
+
+          floatingLabelStyle: TextStyle(color: Colors.red),
           fillColor: backgroundColor,
           hintStyle: TextStyle(color: textColor),
           filled: true,
-          counterStyle: TextStyle(color:  textColor),
-          
+          counterStyle: TextStyle(color: textColor),
           focusColor: textColor,
-          hoverColor: textColor
-          
-          
-          
-          
-          
-          
-          
-          ),
+          hoverColor: textColor,
+
+          focusedBorder:
+              OutlineInputBorder(borderSide: const BorderSide(color: Colors.transparent, )),
+          enabledBorder:
+              OutlineInputBorder(borderSide: const BorderSide(color: Colors.transparent))),
       textTheme: TextTheme(
           caption: TextStyle(color: textColor),
           subtitle1: TextStyle(color: textColor),
@@ -101,9 +94,30 @@ class MovieSearchDelegate extends SearchDelegate {
 Widget _emptyContainer() {
   return Center(
     child: Container(
-      child: Icon(
-        Icons.movie_creation_outlined,
-        size: 130,
+      padding: EdgeInsets.symmetric(horizontal: 15),
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(),
+          ),
+          Icon(
+            Icons.movie_filter_outlined,
+            size: 130,
+            color: Colors.white,
+          ),
+          Text(
+            'No hay resultados',
+            style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w600),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Text('Por favor, ingrese un nombre en la barra de búsqueda'),
+          Expanded(
+            flex: 2,
+            child: Container(),
+          ),
+        ],
       ),
     ),
   );

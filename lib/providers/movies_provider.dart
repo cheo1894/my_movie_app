@@ -11,7 +11,7 @@ import 'package:my_movie_app/models/top_rated_response.dart';
 import 'package:my_movie_app/models/upcoming_response.dart';
 
 class MoviesProvider extends ChangeNotifier {
-  Color _cardColor = Color(0xff477A8E);
+  Color _cardColor = Color(0xff0F73D4);
   get cardColor => _cardColor;
   String _api_key = '26f6006b82b2248d6e67631d0e8632ab';
   String _baseUrl = 'api.themoviedb.org';

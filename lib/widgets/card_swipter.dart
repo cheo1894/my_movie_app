@@ -1,4 +1,3 @@
-import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:my_movie_app/models/movies.dart';
 import 'package:carousel_slider/carousel_slider.dart';
